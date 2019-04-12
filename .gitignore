@@ -19,3 +19,4 @@ code/
 cargo-installs/
 atlassian-ide-plugin.xml
 deploy/
+*.swp
