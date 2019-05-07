@@ -31,4 +31,12 @@ public class Avante extends AbstractCar {
     public void setEngine(Engine engine) {
         this.engine = engine;
     }
+
+    @Override
+    public String toString() {
+        return "Avante{" +
+                "name='" + name + '\'' +
+                ", engine=" + engine +
+                '}';
+    }
 }
