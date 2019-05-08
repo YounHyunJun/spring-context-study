@@ -1,9 +1,12 @@
-package hard.study.spring.bean;
+package study.spring.context.bean;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.support.RootBeanDefinition;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.StaticApplicationContext;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -74,7 +77,28 @@ public class PopulateBeanTests {
 
     @Test
     public void 빈_애노테이션_주입_테스트() {
-        
+        StaticApplicationContext context = new StaticApplicationContext();
+        AutowiredAnnotationBeanPostProcessor bpp = new AutowiredAnnotationBeanPostProcessor();
+        bpp.setBeanFactory(context.getBeanFactory());
+        context.getBeanFactory().addBeanPostProcessor(bpp);
+
+        RootBeanDefinition avante = new RootBeanDefinition();
+        avante.setBeanClass(Avante.class);
+
+        RootBeanDefinition goldWheel = new RootBeanDefinition();
+        goldWheel.setBeanClass(GoldWheel.class);
+
+        context.registerBeanDefinition("avante", avante);
+        context.registerBeanDefinition("wheel", goldWheel);
+
+        context.refresh();
+
+        Avante avanteBean = context.getBean("avante", Avante.class);
+
+        assertNotNull(avanteBean.getWheel());
+
+        avanteBean.changeWheel();
+
     }
 
 }

@@ -1,4 +1,4 @@
-package hard.study.spring.bean;
+package study.spring.context.bean;
 
 public class Spark extends AbstractCar {
 
