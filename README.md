@@ -15,4 +15,4 @@
 - [스프링 빈 생성 #3 createBeanInstance](https://github.com/YounHyunJun/spring-context-study/blob/master/summary/CreateBean/3.%20createBeanInstance.md)
 
 #### 빈 주입
-- [스프링 빈 주입 #1] populateBean(https://github.com/YounHyunJun/spring-context-study/blob/master/summary/CreateBean/1.%20createBean.md)
+- [스프링 빈 주입 #1 populateBean](https://github.com/YounHyunJun/spring-context-study/blob/master/summary/PopulateBean/1.%20populateBean.md)
