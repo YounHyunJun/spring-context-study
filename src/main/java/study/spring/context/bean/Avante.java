@@ -1,4 +1,4 @@
-package hard.study.spring.bean;
+package study.spring.context.bean;
 
 public class Avante extends AbstractCar {
 
@@ -9,8 +9,6 @@ public class Avante extends AbstractCar {
     }
 
     private String name;
-
-    private Engine engine;
 
     public String getName() {
         return name;
@@ -24,11 +22,4 @@ public class Avante extends AbstractCar {
         System.out.println(getName() + " 달리다");
     }
 
-    public Engine getEngine() {
-        return engine;
-    }
-
-    public void setEngine(Engine engine) {
-        this.engine = engine;
-    }
 }
