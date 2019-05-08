@@ -1,4 +1,4 @@
-package hard.study.spring.bean;
+package study.spring.context.bean;
 
 public class StrongEngine implements Engine{
     public void run() {

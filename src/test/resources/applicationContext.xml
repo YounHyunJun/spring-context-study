@@ -3,10 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bean1-1" class="hard.study.spring.bean.Avante">
+    <bean id="bean1-1" class="study.spring.context.bean.Avante">
         <property name="engine" ref="bean1-2" />
     </bean>
 
-    <bean id="bean1-2" class="hard.study.spring.bean.StrongEngine"/>
+    <bean id="bean1-2" class="study.spring.context.bean.StrongEngine"/>
 
 </beans>
