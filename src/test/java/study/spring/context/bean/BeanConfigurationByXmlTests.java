@@ -1,4 +1,4 @@
-package hard.study.spring.bean;
+package study.spring.context.bean;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "classpath:/applicationContext.xml" })
+@ContextConfiguration({"classpath:/applicationContext.xml"})
 public class BeanConfigurationByXmlTests {
 
     @Autowired
@@ -26,9 +26,18 @@ public class BeanConfigurationByXmlTests {
     public void 프로퍼티를_이용한_빈주입_테스트() {
 
         Avante car = applicationContext.getBean("bean1-1", Avante.class);
-        assertNotNull(car.getEngine());
 
-        System.out.println(car);
+        assertNotNull(car.getEngine()); // xml property
+
+    }
+
+    @Test
+    public void 애노테이션을_이용한_빈주입_테스트() {
+
+        Avante car = applicationContext.getBean("bean1-1", Avante.class);
+
+        assertNotNull(car.getWheel()); // autowired annotation
+
     }
 
 }
