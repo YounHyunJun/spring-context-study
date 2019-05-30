@@ -2,7 +2,7 @@ initializeBean (빈이름, 빈, 빈정의)
 빈 초기화
 
 1
-__invokeAwareMethods (빈 이름, 빈)__
+invokeAwareMethods (빈 이름, 빈)
 알고있는 메소드들을 호출
 
 BeanNameAware 
