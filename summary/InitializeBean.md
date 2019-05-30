@@ -1,8 +1,8 @@
-initializeBean (빈이름, 빈, 빈정의)
-빈 초기화
+protected Object **initializeBean**(final String beanName, final Object bean, RootBeanDefinition mbd)
+**빈 초기화**
 
 1
-invokeAwareMethods (빈 이름, 빈)
+<span style="color:blue">invokeAwareMethods (빈 이름, 빈)</span>
 알고있는 메소드들을 호출
 
 BeanNameAware 
