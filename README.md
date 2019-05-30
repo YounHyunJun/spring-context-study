@@ -16,3 +16,6 @@
 
 #### 빈 주입
 - [스프링 빈 주입 #1 populateBean](https://github.com/YounHyunJun/spring-context-study/blob/master/summary/PopulateBean/1.%20populateBean.md)
+
+#### 빈 초기화
+- [스프링 빈 주입 #1 initializeBean](https://github.com/YounHyunJun/spring-context-study/blob/master/summary/InitializeBean/1.%20initializeBean.md)
